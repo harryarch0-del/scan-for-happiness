@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scan for Happiness</title>
+  <title>Scan For Happiness</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -62,10 +62,16 @@
     <p class="punchline">You really thought I gave up? 😂 What a joke.</p>
     <p class="footer">btw feet👅</p>
   </div>
-  <audio autoplay>
+  <audio id="alarm" muted autoplay>
     <source src="alarmtone.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+  <script>
+    document.addEventListener("click", () => {
+      const audio = document.getElementById("alarm");
+      audio.muted = false;
+      audio.play().catch(e => console.log("Audio play failed:", e));
+    });
+  </script>
 </body>
 </html>
-
