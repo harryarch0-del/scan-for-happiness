@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scan For Happiness</title>
+  <title>Jet 2 Holiday - Prank Edition</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <style>
     body {
       margin: 0;
@@ -91,6 +92,12 @@
       audio.play().catch(e => console.log("Audio play failed:", e));
       playBtn.innerText = "Enjoy your deal 😈";
       playBtn.disabled = true;
+
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
     });
   </script>
 </body>
