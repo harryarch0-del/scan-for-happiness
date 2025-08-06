@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jet 2 Holiday - Prank Edition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      color: #222;
+      position: relative;
+    }
+
+    .container {
+      background: white;
+      padding: 3rem;
+      border-radius: 2rem;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .punchline {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      color: #d6336c;
+      animation: pop 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes pop {
+      from { transform: scale(1); }
+      to { transform: scale(1.05); }
+    }
+
+    .footer {
+      font-size: 1rem;
+      margin-top: 2rem;
+      opacity: 0.8;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Nothing beats a Jet 2 Holiday, now you can get even 50 pounds off 🎉✈️</h1>
+    <p class="punchline">You really thought I gave up? 😂 What a joke.</p>
+    <p class="footer">btw feet👅</p>
+  </div>
+  <audio autoplay>
+    <source src="alarmtone.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
