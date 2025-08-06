@@ -51,6 +51,22 @@
       opacity: 0.8;
     }
 
+    #play-btn {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #play-btn:hover {
+      background-color: #e91e63;
+    }
+
     audio {
       display: none;
     }
@@ -60,17 +76,21 @@
   <div class="container">
     <h1>Nothing beats a Jet 2 Holiday, now you can get even 50 pounds off 🎉✈️</h1>
     <p class="punchline">You really thought I gave up? 😂 What a joke.</p>
+    <button id="play-btn">Click me once please 🥺</button>
     <p class="footer">btw feet👅</p>
   </div>
-  <audio id="alarm" muted autoplay>
+  <audio id="alarm">
     <source src="alarmtone.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   <script>
-    document.addEventListener("click", () => {
-      const audio = document.getElementById("alarm");
-      audio.muted = false;
+    const playBtn = document.getElementById("play-btn");
+    const audio = document.getElementById("alarm");
+
+    playBtn.addEventListener("click", () => {
       audio.play().catch(e => console.log("Audio play failed:", e));
+      playBtn.innerText = "Enjoy your deal 😈";
+      playBtn.disabled = true;
     });
   </script>
 </body>
